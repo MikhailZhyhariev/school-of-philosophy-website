@@ -1,4 +1,4 @@
-Opera Casino website
+School of Philosophy website
 
 BEM Methodology, GULP, SASS
 

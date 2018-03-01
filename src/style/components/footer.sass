@@ -1,0 +1,27 @@
+.footer
+  padding-bottom: 20px
+
+  .container
+    display: flex
+    justify-content: space-between
+
+  &__logo
+    color: #d4d4d4
+
+  &__copyright
+    align-self: flex-end
+    color: #d4d4d4
+    font-size: 14px
+
+@media (min-width: 768px)
+  .footer
+    .container
+      justify-content: flex-start
+
+    &__copyright
+      margin-left: 15px
+
+
+@media (min-width: 1024px)
+ .footer
+   padding-bottom: 90px

@@ -118,11 +118,11 @@ gulp.task('build', gulp.series(
   'style:build',
   gulp.parallel(
     'html:build',
-    // 'js:build',
+    'js:build',
     'fonts:build',
     'img:build'
-  ),
-  'critical'
+  )
+  // 'critical'
 ));
 
 gulp.task('watch', function() {
