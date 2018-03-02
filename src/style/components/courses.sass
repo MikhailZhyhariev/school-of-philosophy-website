@@ -1,0 +1,128 @@
+.courses
+  margin-bottom: 40px
+
+  .container
+    display: flex
+    flex-flow: row wrap
+    border: 1px solid #2d3c52
+    border-bottom: none
+
+  &__item
+    padding: 0 10px
+    height: 50px
+    box-sizing: border-box
+    flex: 1 1 280px
+    overflow: hidden
+    will-change: height
+    transition: height .5s ease-in-out
+    border-bottom: 1px solid #2d3c52
+    position: relative
+
+  &__header
+    padding: 10px 0
+    margin: 0
+    margin-bottom: 30px
+    font-size: 24px
+    color: #2d3c52
+    user-select: none
+    cursor: pointer
+
+  &__date
+    font-size: 20px
+    margin-bottom: 10px
+    color: #f1980a
+
+  &__day
+    font-size: 1em
+    color: inherit
+
+  &__time
+    color: inherit
+
+  &__description
+    margin-top: 25px
+    color: #c9c9c9
+
+  &__link
+    margin-top: 25px
+    display: inline-block
+    color: black
+    text-decoration: none
+
+    &-arrow
+      fill: black
+      width: 12px
+      height: 12px
+      transform: rotate(-90deg)
+
+  &__button
+    position: absolute
+    top: 10px
+    right: 10px
+    transform: rotate(-90deg)
+    transition: transform .5s ease-in-out
+    cursor: pointer
+
+    &-pressed
+      transform: none
+
+@media (min-width: 768px)
+  .courses
+    .container
+      border: none
+      justify-content: space-between
+
+    &__item
+      padding: 10px
+      height: auto
+      flex: 0 0 270px
+      border: none
+
+      &:nth-child(n+3)
+        margin-top: 50px
+
+    &__header
+      padding: 0
+
+    &__button
+      display: none
+
+@media (min-width: 1023px)
+  .courses
+    &__item
+      flex: 0 1 23%
+      margin: 0
+
+      &:nth-child(n+3)
+        margin-top: 0px
+
+@media (min-width: 1365px)
+  .courses
+    margin-bottom: 60px
+
+    &__header
+      font-size: 36px
+
+    &__date
+      font-size: 24px
+
+    &__item
+      flex: 1 0 270px
+      padding: 0 20px 40px 20px
+
+      &:hover
+        background-color: #f1980a
+        padding-top: 20px
+        padding-bottom: 20px
+
+        .courses
+          &__header,
+          &__description
+            color: white
+
+          &__date,
+          &__link
+            color: #ffc97d
+
+            &-arrow
+              fill: #ffc97d
