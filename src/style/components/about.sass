@@ -1,7 +1,4 @@
 .about
-  .container
-    // border: 1px solid
-
   &__header
     margin: 0
     margin-bottom: 20px
@@ -17,6 +14,7 @@
     margin-bottom: 25px
 
   &__testimonials
+    font-size: 24px
     color: #2c3a4c
     margin-bottom: 20px
 
@@ -67,3 +65,23 @@
 
     &-name
       color: #f1980a
+
+@media (min-width: 1366px)
+  .about
+    &__header
+      font-size: 60px
+      margin-bottom: 40px
+
+    &__text
+      margin-bottom: 30px
+
+    &__list
+      margin-bottom: 50px
+
+    &__testimonials
+      font-size: 36px
+      margin-bottom: 30px
+
+    &__testimonial
+      &-content
+        margin-left: 30px
