@@ -1,0 +1,69 @@
+.about
+  .container
+    // border: 1px solid
+
+  &__header
+    margin: 0
+    margin-bottom: 20px
+    font-size: 34px
+    color: #2c3a4c
+
+  &__text
+    margin-bottom: 25px
+    color: #c9c9c9
+    line-height: 1.4em
+
+  &__list
+    margin-bottom: 25px
+
+  &__testimonials
+    color: #2c3a4c
+    margin-bottom: 20px
+
+  &__testimonial
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+
+    &-image
+      flex: 0 0 170px
+      display: block
+      margin-bottom: 20px
+
+    &-content
+      margin-left: 15px
+      flex: 1 1 330px
+
+    &-text
+      color: #2c3a4c
+      margin-bottom: 20px
+      text-indent: 30px
+      position: relative
+      line-height: 1.4em
+
+      &::before
+        width: 18px
+        height: 16px
+        content: ''
+        background-image: url('../img/open-quote.svg')
+        background-repeat: no-repeat
+        position: absolute
+        top: -5px
+        left: 0
+
+      span
+        position: relative
+
+        &::after
+          width: 18px
+          height: 16px
+          content: ''
+          background-image: url('../img/open-quote.svg')
+          background-repeat: no-repeat
+          transform: scale(-1, 1)
+          position: absolute
+          bottom: -5px
+          right: -28px
+
+    &-name
+      color: #f1980a

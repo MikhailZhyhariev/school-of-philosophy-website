@@ -1,0 +1,39 @@
+.list
+  list-style: none
+
+  &__link
+    color: inherit
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  &_orange
+    .list
+      &__item
+        color: #f1980a
+        text-transform: uppercase
+        display: flex
+        margin-bottom: 5px
+
+        &-text
+          margin-left: 5px
+          align-self: flex-start
+
+        &-arrow
+          flex: 0 0 12px
+          height: 12px
+          align-self: flex-start
+          margin-top: 2px
+          fill: #f1980a
+          transform: rotate(-90deg)
+
+@media (min-width: 768px)
+  .list
+    &_orange
+      .list
+        &__item
+          margin-bottom: 15px
+
+          &-text
+            margin-left: 15px
