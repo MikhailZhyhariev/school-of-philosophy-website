@@ -1,0 +1,88 @@
+.ad
+  .container
+    padding: 10px
+    box-sizing: border-box
+    background-color: #2c3a4c
+    background-image: url('../img/socrat-2.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 60px 0px
+    position: relative
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+  &__header
+    margin: 0
+    margin-bottom: 20px
+    font-size: 34px
+    color: white
+
+    span
+      color: #f1980a
+
+  &__information
+    padding: 5px
+    font-size: 14px
+    line-height: 130%
+    background-color: #f1980a
+    color: white
+
+  &__time
+    font-size: 11px
+
+  &__link
+    padding: 5px 4px 0 5px
+    position: absolute
+    background-color: #f1980a
+    right: 0
+    bottom: 0
+
+    &-arrow
+      width: 17px
+      height: 17px
+      transform: rotate(-90deg)
+      fill: white
+
+@media (min-width: 465px)
+  .ad
+    .container
+      // padding: 15px 50px
+      background-size: contain
+      background-position: center top
+
+    &__header
+      margin-bottom: 0
+
+    &__information
+      background-color: transparent
+
+    &__link
+      padding: 10px 9px 7px 10px
+
+      &-arrow
+        width: 23px
+        height: 23px
+
+@media (min-width: 700px)
+  .ad
+    .container
+      padding: 15px 50px
+
+@media (min-width: 1024px)
+  .ad
+    &__header
+      font-size: 60px
+
+    &__information
+      font-size: 24px
+
+    &__time
+      font-size: 14px
+
+    &__link
+      padding: 12px 11px 9px 12px
+
+      &-arrow
+        width: 30px
+        height: 30px
