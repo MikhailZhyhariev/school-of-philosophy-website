@@ -1,4 +1,8 @@
 .events
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
   &__item
     margin-bottom: 30px
     display: flex
@@ -10,15 +14,16 @@
       margin-bottom: 0
 
   &__image
-    flex: 1 0 270px
+    flex: 1 1 270px
     width: 270px
 
   &__information
     box-sizing: border-box
-    padding: 25px 25px 25px 30px
-    flex: 1 1 300px
+    padding: 25px
+    flex: 1 1 200px
     display: flex
     flex-direction: column
+    justify-content: space-around
 
   &__date
     margin-bottom: 20px
@@ -36,6 +41,7 @@
   &__description
     width: inherit
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
 
   &__name
@@ -55,10 +61,24 @@
       fill: #ffd38c
       transform: rotate(-90deg)
 
+@media (min-width: 538px)
+  .events
+    &__information
+      padding: 0 15px
+
+    &__date
+      margin-bottom: 0
+
+    &__name
+      margin-right: 10px
+
+    &__link
+      margin-top: 10px
+
 @media (min-width: 768px)
   .events
     &__information
-      padding: 20px 25px 0 25px
+      padding: 0 25px 0 30px
 
     &__image
       flex-grow: 0
@@ -77,3 +97,8 @@
 
             &-arrow
               fill: #f1980a
+
+@media (min-width: 1366px)
+  .events
+    box-sizing: border-box
+    padding-left: 30px

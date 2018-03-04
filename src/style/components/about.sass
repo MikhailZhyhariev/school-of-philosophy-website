@@ -1,4 +1,7 @@
 .about
+  margin-bottom: 50px
+  box-sizing: border-box
+
   &__header
     margin: 0
     margin-bottom: 20px
@@ -29,8 +32,7 @@
       margin-bottom: 20px
 
     &-content
-      margin-left: 15px
-      flex: 1 1 330px
+      flex: 1 1 200px
 
     &-text
       color: #2c3a4c
@@ -66,8 +68,16 @@
     &-name
       color: #f1980a
 
+@media (min-width: 572px)
+  .about
+    &__testimonial
+      &-content
+        margin-left: 15px
+
 @media (min-width: 1366px)
   .about
+    margin-bottom: 0
+
     &__header
       font-size: 60px
       margin-bottom: 40px
@@ -85,3 +95,6 @@
     &__testimonial
       &-content
         margin-left: 30px
+
+      &-image
+        margin-bottom: 0
