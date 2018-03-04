@@ -19,7 +19,6 @@
     flex: 1 1 300px
     display: flex
     flex-direction: column
-    // justify-content: space-between
 
   &__date
     margin-bottom: 20px
@@ -63,3 +62,18 @@
 
     &__image
       flex-grow: 0
+
+@media (min-width: 1024px)
+  .events
+    &__item:hover
+        background-color: #2c3a4c
+
+        .events
+          &__date
+            color: #6682a7
+
+          &__link
+            color: #f1980a
+
+            &-arrow
+              fill: #f1980a
