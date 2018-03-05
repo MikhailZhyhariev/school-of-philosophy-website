@@ -43,16 +43,15 @@
       clearInterval(timer);
     }
   });
-
   lineBefore.onclick = lineAfter.onclick = function(e) {
     updateTimeline(e);
   }
 
-  controller.onmousedown = function() {
-    document.onmousemove = function(e) {
+  controller.onmousedown = controller.ontouchstart = function() {
+    document.ontouchdown = document.onmousemove = function(e) {
       updateTimeline(e)
     }
-    document.onmouseup = function() {
+    document.ontouchend = document.onmouseup = function() {
       document.onmousemove = null;
     }
   }
