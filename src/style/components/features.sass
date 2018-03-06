@@ -1,0 +1,52 @@
+.features
+  padding: 10px 0 20px 0
+  background-color: #f1980a
+  position: relative
+  z-index: 1
+
+  &__item
+    display: flex
+    color: white
+    // border: 1px solid
+
+  &__number
+    padding: 5px 10px 5px 15px
+    margin: 0
+    font-size: 34px
+
+  &__text
+    padding: 5px 10px
+    font-size: 16px
+
+  &__background
+    width: 100%
+    position: absolute
+    top: 10px
+    left: 0
+    z-index: -1
+    transition: top 0.5s ease-in-out
+
+    .features
+      &__number
+        color: #2c3a4c
+        background-color: #2c3a4c
+
+      &__text
+        width: 100%
+        color: #d48403
+        background-color: #d48403
+
+@media (min-width: 500px) and  (orientation: portrait)
+  .features
+    padding: 40px 0 60px 0
+
+    &__number
+      padding: 20px 15px 20px 30px
+      font-size: 60px
+
+    &__text
+      padding: 26px 15px 20px 30px
+      font-size: 24px
+
+    &__background
+      top: 40px
