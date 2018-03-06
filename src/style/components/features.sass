@@ -8,10 +8,15 @@
     display: flex
     color: white
 
+    &[active]
+      .features__number
+        color: #f1980a
+
   &__number
     padding: 5px 10px 5px 15px
     margin: 0
     font-size: 34px
+    transition: color .5s ease-in-out
 
   &__text
     padding: 5px 10px

@@ -5,18 +5,20 @@
     var items = features.querySelectorAll('.features__item');
 
     var featuresTop = features.getBoundingClientRect().top;
+    var items = features.querySelectorAll('.features__item');
 
     timer = setInterval(function() {
       var paddingTop = getComputedStyle(features).paddingTop;
-      var lastChildBottom = features.lastChild.getBoundingClientRect().bottom;
+      var active = features.querySelector('div[active]')
+      var nextItem = active.nextElementSibling;
 
-      var backgroundPosition = background.getBoundingClientRect();
+      if (nextItem == null) nextItem = items[1];
+      var nextItemTop = nextItem.getBoundingClientRect().top;
+      
+      active.removeAttribute('active');
+      nextItem.setAttribute('active', '');
 
-      if (backgroundPosition.bottom >= lastChildBottom) {
-        background.style.top = paddingTop;
-      } else {
-        background.style.top = backgroundPosition.bottom - featuresTop + 'px';
-      }
+      background.style.top = nextItemTop - featuresTop + 'px';
     }, 1000);
   } catch(err) {
     console.log(err);
