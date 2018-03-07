@@ -12,7 +12,7 @@
         var active = items.querySelector('div[active]');
         active.removeAttribute('active');
         date.setAttribute('active', '');
-      })
+      });
     });
 
     function updateActiveElement(baseElement, targetElement) {
@@ -26,14 +26,14 @@
 
       newElement.appendChild(time);
       activeItem.replaceChild(newElement, date);
-    }
+    };
 
-    function createElement(tag, className, content='') {
+    function createElement(tag, className, content) {
       var element = document.createElement(tag);
       element.className = className;
       element.innerHTML = content;
       return element;
-    }
+    };
 
   } catch(err) {
     console.log(err);
