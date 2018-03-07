@@ -4,9 +4,9 @@
     var background = features.querySelector('.features__background');
     var items = features.querySelectorAll('.features__item');
 
-    var featuresTop = features.getBoundingClientRect().top;
 
     timer = setInterval(function() {
+      var featuresTop = features.getBoundingClientRect().top;
       var paddingTop = getComputedStyle(features).paddingTop;
       var active = features.querySelector('div[active]')
       var nextItem = active.nextElementSibling;

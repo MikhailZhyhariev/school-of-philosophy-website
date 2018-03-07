@@ -54,18 +54,10 @@
     }
 
     controller.onmousedown = controller.ontouchstart = function() {
-      document.body.style.position = 'fixed';
-      document.body.style.top = Math.max(
-        document.body.scrollHeight, document.documentElement.scrollHeight,
-        document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
-      );
-
       document.ontouchdown = document.onmousemove = function(e) {
         updateTimeline(e)
       }
       document.ontouchend = document.onmouseup = function() {
-        document.body.style.position = 'static';
         document.onmousemove = null;
       }
     }

@@ -1,0 +1,27 @@
+.main-front
+  background-color: white
+  position: relative
+
+  &__top
+    display: flex
+    flex-flow: row wrap
+
+  &__bottom
+    display: flex
+    flex-flow: row wrap
+
+@media (min-width: 1023px)
+  .main-front
+    &__background
+      background-color: #2c3a4c
+      content: ''
+      width: 100vw
+      position: absolute
+      top: 0
+      left: 0
+
+    &__top
+      flex-wrap: nowrap
+
+    &__bottom
+      flex-wrap: nowrap

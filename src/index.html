@@ -8,12 +8,21 @@
     <title>School of Philosophy</title>
   </head>
   <body>
-    <!-- //= template/header.html -->
-    //= template/front.html
-    //= template/features.html
-    <!-- //= template/calendar.html -->
-    <!-- //= template/music.html -->
-    <!-- <main class="main">
+    //= template/header.html
+    <main class="main-front">
+      <div class="main-front__background"></div>
+      <div class="container">
+        <div class="main-front__top">
+          //= template/front.html
+          //= template/features.html
+        </div>
+        <div class="main-front__bottom">
+          //= template/music.html
+          //= template/calendar.html
+        </div>
+      </div>
+    </main>
+    <!-- <main class="main-content">
       <div class="container">
         //= template/about.html
         //= template/events.html

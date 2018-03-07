@@ -1,6 +1,8 @@
 .features
+  flex-grow: 1
   padding: 10px 0 20px 0
   background-color: #f1980a
+  box-sizing: border-box
   position: relative
   z-index: 1
 
@@ -40,17 +42,44 @@
         color: #d48403
         background-color: #d48403
 
-@media (min-width: 500px) and  (orientation: portrait)
+@media (min-width: 768px) and (max-width: 1023px)
   .features
-    padding: 40px 0 60px 0
-
     &__number
-      padding: 20px 15px 20px 30px
+      padding: 10px 15px 10px 30px
       font-size: 60px
 
     &__text
-      padding: 26px 15px 20px 30px
+      padding: 16px 15px 10px 30px
       font-size: 24px
 
     &__background
       top: 40px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .features
+    flex: 0 0 42.7%
+
+    &__number
+      font-size: 50px
+
+    &__text
+      padding-top: 10px
+      font-size: 20px
+
+
+@media (min-width: 1366px)
+  .features
+    padding: 0
+    padding-top: 20px
+    flex: 0 0 500px
+
+    &__number
+      padding: 10px 15px 10px 30px
+      font-size: 60px
+
+    &__text
+      padding: 16px 15px 10px 30px
+      font-size: 24px
+
+    &__background
+      top: 20px
