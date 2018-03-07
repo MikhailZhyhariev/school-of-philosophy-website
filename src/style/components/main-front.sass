@@ -1,6 +1,19 @@
 .main-front
+  margin-bottom: 50px
   background-color: white
   position: relative
+
+  .container
+    width: 100%
+
+  &__background
+    background-color: #2c3a4c
+    content: ''
+    width: 100vw
+    position: absolute
+    top: 0
+    left: 0
+    display: none
 
   &__top
     display: flex
@@ -10,18 +23,21 @@
     display: flex
     flex-flow: row wrap
 
-@media (min-width: 1023px)
+@media (min-width: 1024px)
   .main-front
+    .container
+      width: 85%
+
     &__background
-      background-color: #2c3a4c
-      content: ''
-      width: 100vw
-      position: absolute
-      top: 0
-      left: 0
+      display: block
 
     &__top
       flex-wrap: nowrap
 
     &__bottom
       flex-wrap: nowrap
+
+@media (min-width: 1366px)
+  .main-front
+    .container
+      width: 1170px
