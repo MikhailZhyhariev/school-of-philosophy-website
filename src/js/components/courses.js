@@ -7,12 +7,19 @@
       var link = course.querySelector('.courses__link');
       var header = course.querySelector('.courses__header');
 
-      button.addEventListener('click', function() {
-        openMenu(course, link, button);
-      });
-      header.addEventListener('click', function() {
-        openMenu(course, link, button);
-      });
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 541) {
+          course.removeAttribute('style');
+        }
+      }, true);
+
+      button.onclick = header.onclick = function() {
+        if (window.innerWidth < 542) {
+          openMenu(course, link, button);
+        } else {
+          disableMenuStyle(course);
+        }
+      };
     });
 
     function openMenu(course, link, button) {
