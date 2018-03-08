@@ -101,13 +101,13 @@
 
     function setVolumeLevel(item) {
       if (!item) return;
-      item.setAttribute('active', '');
+      item.setAttribute('data-active', '');
       setVolumeLevel(item.previousElementSibling);
     }
 
     function clearVolumeLevel(item) {
       if (!item) return;
-      item.removeAttribute('active');
+      item.removeAttribute('data-active');
       clearVolumeLevel(item.nextElementSibling);
     }
   } catch(err) {

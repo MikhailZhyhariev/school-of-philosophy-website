@@ -9,9 +9,9 @@
       date.addEventListener('click', function() {
         updateActiveElement(date, activeItem);
 
-        var active = items.querySelector('div[active]');
-        active.removeAttribute('active');
-        date.setAttribute('active', '');
+        var active = items.querySelector('div[data-active]');
+        active.removeAttribute('data-active');
+        date.setAttribute('data-active', '');
       });
     });
 

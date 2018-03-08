@@ -15,10 +15,10 @@
     position: absolute
     top: 50px
     left: -25px
-    background-color: #2c3a4c
     border: 1px solid white
+    background-color: #2c3a4c
     border-bottom: none
-    z-index: 2
+    z-index: 100
 
     &-closed
       display: none
@@ -39,6 +39,9 @@
     font-size: 1em
     color: white
     text-decoration: none
+
+    &[data-active]
+      color: #6682a7
 
   &__triangle
     width: 10px

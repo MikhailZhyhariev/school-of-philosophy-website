@@ -8,14 +8,14 @@
     timer = setInterval(function() {
       var featuresTop = features.getBoundingClientRect().top;
       var paddingTop = getComputedStyle(features).paddingTop;
-      var active = features.querySelector('div[active]')
+      var active = features.querySelector('div[data-active]');
       var nextItem = active.nextElementSibling;
 
       if (nextItem == null) nextItem = background.nextElementSibling;
       var nextItemTop = nextItem.getBoundingClientRect().top;
 
-      active.removeAttribute('active');
-      nextItem.setAttribute('active', '');
+      active.removeAttribute('data-active');
+      nextItem.setAttribute('data-active', '');
 
       background.style.top = nextItemTop - featuresTop + 'px';
     }, 1000);

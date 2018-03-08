@@ -1,11 +1,15 @@
 ;(function() {
-  var mainFront = document.querySelector('.main-front');
-  var mainFrontTop = mainFront.getBoundingClientRect().top;
+  try {
+    var mainFront = document.querySelector('.main-front');
+    var mainFrontTop = mainFront.getBoundingClientRect().top;
 
-  var background = mainFront.querySelector('.main-front__background');
+    var background = mainFront.querySelector('.main-front__background');
 
-  var calendar = document.querySelector('.calendar__extended');
-  var calendarTop = calendar.getBoundingClientRect().top;
+    var calendar = document.querySelector('.calendar__extended');
+    var calendarTop = calendar.getBoundingClientRect().top;
 
-  background.style.height = calendarTop - mainFrontTop + 'px';
+    background.style.height = calendarTop - mainFrontTop + 'px';
+  } catch(err) {
+    console.log(err);
+  }
 })();

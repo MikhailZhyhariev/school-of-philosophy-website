@@ -14,7 +14,6 @@ img
 
 .container
   width: 100%
-  // width: 87.5%
   margin: 0 auto
 
 @media (min-width: 768px)
@@ -25,15 +24,19 @@ img
   .container
     width: 85%
 
-@media (min-width: 1366px)
+@media (min-width: 1365px)
   .container
     width: 1170px
 
+// common
 @import "components/fonts.sass"
 @import "components/text.sass"
 @import "components/logo.sass"
 @import "components/menu.sass"
 @import "components/header.sass"
+@import "components/footer.sass"
+
+// index.html
 @import "components/front.sass"
 @import "components/features.sass"
 @import "components/music.sass"
@@ -45,4 +48,7 @@ img
 @import "components/events.sass"
 @import "components/ad.sass"
 @import "components/courses.sass"
-@import "components/footer.sass"
+
+// courses.html
+@import "components/course-head.sass"
+@import "components/course-inner.sass"
