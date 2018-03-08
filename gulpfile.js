@@ -121,8 +121,8 @@ gulp.task('build', gulp.series(
     'js:build',
     'fonts:build',
     'img:build'
-  )
-  // 'critical'
+  ),
+  'critical'
 ));
 
 gulp.task('watch', function() {
