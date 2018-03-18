@@ -1,0 +1,65 @@
+.team
+  padding-top: 55px
+  background-color: #2c3a4c
+
+  &__header
+    padding: 0 6.25%
+    margin-bottom: 24px
+    font-size: 24px
+    color: #fff
+
+  &__items
+    display: flex
+    flex-flow: row wrap
+    width: 100%
+
+  &__item
+    margin-bottom: 55px
+    flex: 1 1 270px
+
+  &__image
+    width: 100%
+
+  &__name
+    padding: 0 6.25%
+    margin-top: 30px
+    font-size: 20px
+    color: #6682a7
+
+  &__description
+    padding: 0 6.25%
+    margin-top: 20px
+    color: #fff
+
+@media (min-width: 570px)
+  .team
+    &__item
+      &:nth-child(2n)
+        margin-left: 30px
+
+@media (min-width: 768px)
+  .team
+    &__header,
+    &__name,
+    &__description
+      padding: 0
+
+@media (min-width: 1024px)
+  .team
+    &__items
+      flex-wrap: nowrap
+
+    &__item
+      margin-left: 30px
+      flex-grow: 0
+
+      &:first-child
+        margin-left: 0
+
+@media (min-width: 1366px)
+  .team
+    &__header
+      font-size: 36px
+
+    &__name
+      font-size: 24px
