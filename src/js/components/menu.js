@@ -4,14 +4,15 @@
     var menuButton = document.querySelector('.menu__button');
     var links = menuList.querySelectorAll('.menu__link');
 
-    var href = window.location.href
+    var pattern = /http[s]?:\/\/.*\/(.*)/;
+    var url = String(window.location.href).match(pattern)[1] || 'index.html';
 
     links.forEach(function(link) {
-      console.log(href.localeCompare(link.href));
-      if (href.localeCompare(link.href) == 0) {
+      var href = link.href.match(pattern)[1];
+      if (href == url) {
         link.setAttribute('data-active', '');
       } else {
-        link.removeAttribute('data-active')
+        link.removeAttribute('data-active');
       }
     });
 
