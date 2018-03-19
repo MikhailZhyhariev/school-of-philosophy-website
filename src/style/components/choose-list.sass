@@ -1,0 +1,50 @@
+.choose-list
+  padding: 55px 6.25%
+  font-size: 24px
+
+  &__header
+    margin: 0
+    margin-bottom: 20px
+    font-size: 1em
+    color: #2d3c52
+
+  &__item
+    margin-bottom: 30px
+    font-size: 20px
+    display: flex
+
+    .choose-list
+      &__header
+        margin-top: -0.15em
+        margin-bottom: 10px
+        color: #e6af00
+        font-size: 1em
+
+    &:last-child
+      margin-bottom: 0
+
+  &__digit
+    margin-right: 0.6em
+    padding: 0.41em
+    font-size: 1.2em
+    background-color: #f1980a
+    color: #fff
+    align-self: flex-start
+
+  &__text
+    color: #c9c9c9
+
+@media (min-width: 768px)
+  .choose-list
+    padding: 55px 0
+
+@media (min-width: 1366px)
+  .choose-list
+    &__header
+      font-size: 36px
+
+    &__item
+      font-size: 24px
+
+    &__digit
+      font-size: 1.5em
