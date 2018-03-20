@@ -1,7 +1,7 @@
 ;(function() {
   try {
-    var filter = document.querySelector('.course-head__filter-menu');
-    var filterItems = filter.querySelectorAll('.course-head__item');
+    var filter = document.querySelector('.head-menu__filter-menu');
+    var filterItems = filter.querySelectorAll('.head-menu__item');
     var coursesItems = document.querySelectorAll('.course-inner');
 
     filterItems.forEach(function(item, idx) {
