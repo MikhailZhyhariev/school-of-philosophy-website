@@ -1,12 +1,65 @@
 .social
+  display: flex
+  flex-flow: row wrap
+
   &__item
+    margin-right: 10px
+    height: 20px
+    box-sizing: border-box
+    display: flex
+    flex: 0 0 auto
+    font-size: 12px
 
   &__button
+    outline: none
+    cursor: pointer
+    border-radius: 2px
+    border: 1px solid #dadada
 
   &__counter
+    margin-left: 5px
+    padding: 0 5px
+    border: 1px solid #dadada
+    border-radius: 3px
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    &:after
+      width: 5px
+      height: 5px
+      content: ''
+      position: absolute
+      top: 6px
+      left: -4px
+      border-left: 1px solid #dadada
+      border-bottom: 1px solid #dadada
+      border-radius: 1px
+      background-color: #fff
+      transform: rotate(45deg)
 
   &__twitter
+    padding: 0 3px 0 20px
+    font-weight: bold
+    background-color: #eeeeee
+    background-image: url('../img/twitter.png')
+    background-repeat: no-repeat
+    background-position: 5px center
 
   &__facebook
+    padding: 0 5px 0 20px
+    border: 1px solid #d9e0ef
+    color: #4360a9
+    background-color: #f5f5fa
+    background-image: url('../img/facebook.png')
+    background-repeat: no-repeat
+    background-position: 5px center
 
   &__google
+    padding: 0 6px 0 14px
+    background-color: #f4f4f4
+    background-image: url('../img/google.png')
+    background-repeat: no-repeat
+    background-position: left bottom
+    color: #e56043
