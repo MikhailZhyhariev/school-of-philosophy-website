@@ -1,0 +1,48 @@
+.comment
+  padding: 15px 20px 20px 20px
+  background-color: #2c3a4c
+
+  &__author
+    margin-bottom: 15px
+
+  &__flex
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+
+  &__content
+    flex: 1 1 610px
+
+  &__avatar
+    margin-bottom: 20px
+    padding: 17px 12px 0 12px
+    flex: 0 0 auto
+    background-color: #fff
+    display: block
+
+  &__text
+    color: white
+
+  &__link
+    color: #fff
+    display: block
+    margin-top: 40px
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  &__name
+    color: #e6af00
+
+  &__padding
+    padding-top: 15px
+
+@media (min-width: 856px)
+  .comment
+    &__content
+      padding-left: 15px
+      box-sizing: border-box
+
+    &__avatar
+      margin: 0

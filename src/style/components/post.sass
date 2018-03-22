@@ -22,13 +22,49 @@
     margin-top: 20px
     color: #c9c9c9
 
-@media (min-width: 618px)
-  .post
-    &__title
-      margin-top: -3px
+  &__panel
+    margin-top: 30px
+    padding: 18px 5px
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    border-top: 1px solid #c9c9c9
+    border-bottom: 1px solid #c9c9c9
 
-    &__image
-      margin-right: 30px
+    &-left
+      display: flex
+      flex-flow: row wrap
+      flex: 1 1 auto
+
+    &-right
+      flex: 0 1 auto
+      display: flex
+
+      .post__panel-button
+        flex: 0 1 auto
+        margin-bottom: 0
+        margin-right: 0
+
+    &-button
+      margin: 0
+      margin-right: 15px
+      margin-bottom: 15px
+      text-decoration: none
+      flex: 0 1 auto
+
+      &:hover
+        text-decoration: underline
+
+    &-image
+      margin-top: -1px
+      margin-right: 3px
+      vertical-align: middle
+
+@media (min-width: 662px)
+  .post
+    &__panel
+      &-button
+        margin-bottom: 0px
 
 @media (min-width: 1366px)
   .post

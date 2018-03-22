@@ -71,12 +71,13 @@ gulp.task('style:build', function() {
 
 gulp.task('img:build', function() {
   return gulp.src(path.src.img)
-             .pipe(imagemin({
+             .pipe(gulpIf(!isDevelopment,
+             imagemin({
                 progressive: true,
                 svgoPluggins: [{removeViewBox: false}],
                 use: [pngquant()],
                 interlaced: true
-              }))
+             })))
              .pipe(gulp.dest(path.build.img))
 });
 
@@ -91,26 +92,28 @@ gulp.task('clean', function() {
 
 gulp.task('critical', function() {
   return gulp.src('build/*.html')
-             .pipe(critical.stream({
-                inline: true,
-                base: path.build.html,
-                css: [`${path.build.css}style.css`],
-                dimensions: [{
-                  width: 320,
-                  height: 568
-                }, {
-                  width: 768,
-                  height: 510
-                }, {
-                  width: 1920,
-                  height: 540
-                }],
-                minify: true,
-                extract: false,
-                ignore: ['@font-face']
-              }))
-              .pipe(gulpIf(!isDevelopment, htmlmin({collapseWhitespace: true})))
-              .pipe(gulp.dest(path.build.html))
+             .pipe(gulpIf(!isDevelopment,
+               critical.stream({
+                  inline: true,
+                  base: path.build.html,
+                  css: [`${path.build.css}style.css`],
+                  dimensions: [{
+                    width: 320,
+                    height: 568
+                  }, {
+                    width: 768,
+                    height: 510
+                  }, {
+                    width: 1920,
+                    height: 540
+                  }],
+                  minify: true,
+                  extract: false,
+                  ignore: ['@font-face']
+                })
+             ))
+             .pipe(gulpIf(!isDevelopment, htmlmin({collapseWhitespace: true})))
+             .pipe(gulp.dest(path.build.html))
 })
 
 gulp.task('build', gulp.series(
@@ -121,8 +124,8 @@ gulp.task('build', gulp.series(
     'js:build',
     'fonts:build',
     'img:build'
-  )
-  // 'critical'
+  ),
+  'critical'
 ));
 
 gulp.task('watch', function() {
