@@ -1,0 +1,37 @@
+.related-posts
+  padding: 0 6.25%
+
+  .container
+    padding-bottom: 35px
+    border-bottom: 1px solid #c9c9c9
+
+  &__header
+    margin: 0
+    margin-bottom: 25px
+    font-size: 20px
+
+  &__items
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+
+  &__item
+    margin-bottom: 30px
+    flex: 0 0 170px
+
+  &__image
+    margin-bottom: 30px
+    display: block
+
+  &__text
+    color: #c9c9c9
+
+
+@media (min-width: 768px)
+  .related-posts
+    padding: 0
+
+@media (min-width: 1366px)
+  .related-posts
+    &__header
+      font-size: 36px
