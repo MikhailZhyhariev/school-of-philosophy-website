@@ -6,3 +6,4 @@
 //= components/music.js
 //= components/courses.js
 //= components/courses-inner.js
+//= components/reply.js
