@@ -1,4 +1,6 @@
 .reply
+  margin-top: 55px
+  margin-bottom: 55px
   padding: 0 6.25%
 
   .container
@@ -9,6 +11,7 @@
     margin: 0
     margin-bottom: 25px
     font-size: 20px
+    color: #2d3c52
 
   &__form
     display: flex
@@ -18,7 +21,7 @@
     padding: 20px
     margin-bottom: 20px
     box-sizing: border-box
-    color: #c9c9c9
+    color: #2d3c52
     border: 1px solid #c9c9c9
     box-shadow: 0 1px #ededed
     max-width: 400px
@@ -27,11 +30,12 @@
       color: #c9c9c9
 
   &__comment
-    max-width: 100%
+    max-width: 770px
 
   &__button
     outline: none
     border: none
+    background: transparent
     align-self: flex-start
     text-align: left
     color: #c9c9c9
@@ -47,10 +51,14 @@
       top: 2px
       right: -25px
 
+    &:active
+      color: #2d3c52
+
 @media (min-width: 768px)
   .reply
     padding: 0
 
 @media (min-width: 1366px)
   .reply
-    font-size: 36px
+    &__header
+      font-size: 36px

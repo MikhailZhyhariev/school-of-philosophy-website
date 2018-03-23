@@ -1,0 +1,25 @@
+.events-main
+  padding: 0 6.25%
+
+  .container
+    display: flex
+    flex-flow: row wrap
+
+  &__left
+    flex: 1 1 770px
+
+  &__right
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    flex: 1 1 400px
+
+@media (min-width: 768px)
+  .events-main
+    padding: 0
+
+@media (min-width: 1365px)
+  .events-main
+    &__right
+      padding-left: 30px
+      box-sizing: border-box

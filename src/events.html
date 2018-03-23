@@ -9,7 +9,7 @@
   </head>
   <body>
     //= template/header.html
-    <!-- <section class="head-menu">
+    <section class="head-menu">
       <div class="container">
         <h1 class="head-menu__header text_light">Events</h1>
         <ul class="head-menu__menu">
@@ -18,13 +18,21 @@
           <li class="head-menu__item text_light" data-active>Events</li>
         </ul>
       </div>
-    </section> -->
-    <!-- //= template/latest-event.html -->
-    <!-- //= template/related-posts.html -->
-    <!-- //= template/categories.html -->
-    <!-- //= template/archives.html -->
-    <!-- //= template/recent-comment.html -->
-    <!-- //= template/response.html -->
+    </section>
+    <main class="events-main">
+      <div class="container">
+        <div class="events-main__left">
+          //= template/latest-event.html
+          //= template/related-posts.html
+        </div>
+        <div class="events-main__right">
+          //= template/categories.html
+          //= template/archives.html
+          //= template/recent-comment.html
+        </div>
+      </div>
+    </main>
+    //= template/response.html
     //= template/reply.html
     //= template/footer.html
 
